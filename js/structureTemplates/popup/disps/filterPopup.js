@@ -1,0 +1,98 @@
+var filterPopup = {
+  structureType: "Popup",
+  name: "filterPopup",
+  storeName:"dispsStore",
+
+  props: {
+    header: "Фильтр",
+    submitBtns: true,
+    submitEvent: "filteringData",
+    width: 800,
+    activePoup: false,
+    submitLabel: "Применить",
+    canselLabel:'Отмена',
+    filter:true,
+  },
+  components: [
+    {
+      id: 1,
+      parentId: 0,
+      componentName: "nameDisp",
+      component: "EPCSFormInput",
+      props: {
+        label: "Тип Диспетчерского СМП",
+        labelPosition: "left",
+        type: "select",
+        items: [
+          "Следование в акваторию СМП",
+          "Вход в акваторию СМП",
+          "Плавание в акватории СМП",
+          "Заход в морской порт РФ",
+          "Выход из морского порта СМП",
+          "Выход из акватории СМП",
+        ],
+        value: "",
+        placeholder: "Выберете тип",
+      },
+    },
+    {
+      id: 2,
+      parentId: 0,
+      componentName: "shipName",
+      component: "EPCSFormInput",
+      props: {
+        label: "Судно",
+        labelPosition: "left",
+        placeholder: "Выберете судно",
+        type: "select",
+        items: ["VLADIMIR", "Все суда"],
+        value: "",
+      },
+    },
+    {
+      id: 3,
+      parentId: 0,
+      priority: 1,
+      componentName: "EPCSDirection2121",
+      component: "EPCSDirection",
+      props: {
+        type: "row",
+      },
+    },
+    {
+      componentName: "dateBefore",
+      id: 4,
+      parentId: 3,
+      col: 6,
+      component: "EPCSFormInput",
+      props: {
+        label: "От:",
+        labelPosition: "left",
+        value: "",
+        step: 0,
+        placeholder: "дд.мм.гггг",
+        format: "d.MM.yyyy",
+        type: "date",
+      },
+    },
+    {
+      componentName: "dateAfter",
+      id: 5,
+      parentId: 3,
+      col: 6,
+      component: "EPCSFormInput",
+      props: {
+        type: "date",
+        placeholder: "дд.мм.гггг",
+        direction: "row",
+        format: "d.MM.yyyy",
+        step: 0,
+        label: "До:",
+        labelPosition: "left",
+        value: "",
+      },
+    },
+  ],
+};
+
+export { filterPopup as default };
