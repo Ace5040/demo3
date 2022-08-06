@@ -7,7 +7,7 @@ import commonjs from '@rollup/plugin-commonjs';
 import svg from 'rollup-plugin-svg';
 
 export default {
-    input: 'main.js',
+    input: './src/main.js',
     output: [
         {
             inlineDynamicImports : true,

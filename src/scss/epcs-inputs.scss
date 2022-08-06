@@ -1,0 +1,55 @@
+.CUSTOM {
+  &-EPCS {
+
+    &FormInput,
+    &Direction,
+    &Accordion {
+      padding: 0 20px;
+      margin-bottom: 15px;
+
+      .epcs-form-input-group_left {
+        .epcs-form-input__title_left {
+          white-space: nowrap;
+        }
+
+        .form-input,
+        .form-input__disabled {
+          width: 100%;
+        }
+      }
+    }
+
+    &Accordion {
+      .epcs-components {
+        .accordion-row {
+          margin: 10px 0;
+
+        }
+
+        .direction-row {
+          .col {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.upload-invalid::after {
+  pointer-events: none;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  margin-top: -9px;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  line-height: 18px;
+  font-size: 13px;
+  background-color: #d9534f;
+  color: #fff;
+  content: "!";
+  border-radius: 50%;
+  right: 4px;
+}

@@ -1,0 +1,54 @@
+.epcs-popup,.dx-popup-normal {
+
+  .epcs-form-input-group_left {
+    margin-bottom: 10px;
+    justify-content: space-between;
+    .epcs-form-input__title_left {
+      white-space: nowrap;
+    }
+    .form-input {
+      width: 100%;
+      max-width: 70%;
+    }
+  }
+
+  .direction-row  {
+    .form-input {
+      max-width: none;
+    }
+  }
+  .epcs-popup-submit {
+    display: flex;
+    justify-content: end;
+    button {
+      margin-left: 10px;
+    }
+  }
+  .dx-toolbar {
+    height: 28px;
+    padding-top: 0;
+    padding-bottom: 0;
+    background: linear-gradient(to right, #6cace4 30%, #025ea1 90%);
+    .dx-toolbar-items-container {
+      height: 28px;
+      color: white;
+      display: flex;
+      align-items: center;
+      .dx-button-content {
+        padding: 0;
+        i {
+          color: white;
+        }
+      }
+    }
+  }
+  .dx-popup-content {
+    background: white;
+    .radio-button-group__row-theme-light {
+        box-shadow: none;
+    }
+    .epcs-popup-submit {
+      margin-top: 10px;
+    }
+  }
+}

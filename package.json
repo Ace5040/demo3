@@ -1,27 +1,14 @@
 {
-  "name": "@ace5040/demo",
-  "version": "1.0.10",
-  "description": "",
-  "main": "dist/main.js",
+  "name": "@nlc/permit",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "build": "rollup -c",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "vue-cli-service serve --port 9097",
+    "build": "vue-cli-service build",
+    "buildR": "rollup -c",
+    "serve:standalone": "vue-cli-service serve --mode standalone"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Ace5040/demo.git"
-  },
-  "keywords": [
-    "demo"
-  ],
-  "author": "ace5040",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Ace5040/demo/issues"
-  },
-  "homepage": "https://github.com/Ace5040/demo#readme",
   "dependencies": {
-    "@babel/preset-typescript": "^7.18.6",
     "@enhancedjs/vue-template-in-string-loader": "^0.1.5",
     "@reduxjs/toolkit": "^1.6.2",
     "@vue/babel-helper-vue-jsx-merge-props": "^1.2.1",
@@ -30,35 +17,52 @@
     "core-js": "^3.6.5",
     "devextreme": "21.2.6",
     "devextreme-vue": "21.2.6",
-    "epcs-storybook": "1.1.45",
+    "epcs-storybook": "^1.1.47",
     "jsx-to-string": "^1.4.0",
     "lodash": "^4.17.21",
     "moment": "^2.29.1",
     "ol": "^6.14.1",
-    "proj4": "^2.8.0",
-    "uuid": "^8.3.2",
+    "single-spa-vue": "^2.1.0",
+    "socket.io-client": "^4.5.1",
     "vue": "^2.6.11",
-    "vue-draggable-resizable": "^2.3.0",
     "vue-i18n": "^8.27.0",
-    "vuex": "^3.6.2",
-    "wkx": "^0.5.0"
+    "vuex": "^3.6.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.16",
-    "@rollup/plugin-commonjs": "^22.0.1",
-    "@rollup/plugin-json": "^4.1.0",
-    "@rollup/plugin-node-resolve": "^13.3.0",
     "@vue/cli-plugin-babel": "~4.5.15",
     "@vue/cli-service": "~4.5.15",
     "babel-plugin-transform-inline-environment-variables": "^0.4.4",
     "jsdoc": "^3.6.10",
+    "sass": "^1.49.9",
+    "sass-loader": "^10.1.1",
+    "vue-cli-plugin-single-spa": "~3.2.0",
+    "vue-template-compiler": "^2.6.11",
+    "@rollup/plugin-commonjs": "^22.0.1",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.3.0",
     "rollup": "^2.77.0",
     "rollup-plugin-polyfill-node": "^0.10.1",
     "rollup-plugin-scss": "^3.0.0",
     "rollup-plugin-svg": "^2.0.0",
-    "rollup-plugin-vue2": "^0.8.1",
-    "sass": "^1.49.9",
-    "sass-loader": "^10.1.1",
-    "vue-template-compiler": "^2.6.11"
-  }
+    "rollup-plugin-vue2": "^0.8.1"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
 }

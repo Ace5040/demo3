@@ -1,0 +1,137 @@
+export default [
+    {
+        id: 1,
+        component: "EPCSDirection",
+        componentName: "topRow",
+        col: 12,
+        props: {
+            type: "row",
+        },
+    },
+    {
+        id: 2,
+        parentId: 1,
+        component: "EPCSDirection",
+        componentName: "coordiateRow",
+        col: 10,
+        props: {
+            type: "row",
+        },
+    },
+    {
+        id: 3,
+        component: "EPCSDirection",
+        parentId: 2,
+        componentName: "coordiateRowLat",
+        col: 6,
+        props: {
+            type: "row",
+        },
+    },
+    {
+        id: 4,
+        component: "EPCSDirection",
+        parentId: 2,
+        componentName: "coordiateRowLon",
+        col: 6,
+        props: {
+            type: "row",
+        },
+    },
+    {
+        id: 5,
+        component: "EPCSFormInput",
+        parentId: 3,
+        componentName: "lat",
+        col: 8,
+        props: {
+            type: "number",
+            step: 1,
+            label: "Широта",
+            labelPosition: "left",
+            placeholder: "0.0",
+            max: 90,
+        },
+    },
+    {
+        id: 6,
+        component: "EPCSFormInput",
+        parentId: 3,
+        componentName: "latDirection",
+        col: 4,
+        props: {
+            type: "select",
+            searchObject: [
+                { id: "N", name: "N" },
+                { id: "S", name: "S" },
+            ],
+            placeholder: "N",
+            value: "N",
+        },
+    },
+    {
+        id: 7,
+        component: "EPCSFormInput",
+        parentId: 4,
+        componentName: "lon",
+        col: 8,
+        props: {
+            type: "number",
+            step: 1,
+            label: "Долгота",
+            labelPosition: "left",
+            placeholder: "0.0",
+            max: 180,
+        },
+    },
+    {
+        id: 8,
+        component: "EPCSFormInput",
+        parentId: 4,
+        componentName: "lonDirection",
+        col: 4,
+        props: {
+            type: "select",
+            searchObject: [
+                { id: "E", name: "E" },
+                { id: "W", name: "W" },
+            ],
+            placeholder: "E",
+            value: "E",
+        },
+    },
+    {
+        id: 9,
+        parentId: 1,
+        component: "EPCSDirection",
+        componentName: "coordiateButtonsRow",
+        col: 2,
+        props: {
+            type: "row",
+        },
+    },
+    {
+        id: 10,
+        component: "EPCSButton",
+        col: 6,
+        parentId: 9,
+        componentName: "addButton",
+        props: {
+            type: "icon",
+            label: "F012",
+            event: "addCoordinate",
+        },
+    },
+    {
+        id: 11,
+        component: "EPCSButton",
+        col: 6,
+        parentId: 9,
+        componentName: "deleteButton",
+        props: {
+            type: "icon",
+            label: "F03C",
+            event: "deleteCoordinate",
+        },
+    },
+]

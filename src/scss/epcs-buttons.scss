@@ -1,0 +1,10 @@
+.epcs-error .form-input {
+    border: none;
+    height: 55px;
+
+    >div:first-child,
+    div:first-child.dx-texteditor.dx-editor-outlined {
+        border: solid 1px #B22174 !important;
+        border-radius: 8px;
+    }
+}
