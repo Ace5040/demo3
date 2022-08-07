@@ -41,6 +41,7 @@
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.3.0",
     "rollup": "^2.77.0",
+    "rollup-plugin-alias": "^2.2.0",
     "rollup-plugin-polyfill-node": "^0.10.1",
     "rollup-plugin-scss": "^3.0.0",
     "rollup-plugin-svg": "^2.0.0",

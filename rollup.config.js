@@ -5,9 +5,12 @@ import json from '@rollup/plugin-json';
 import nodePolyfills from 'rollup-plugin-polyfill-node';
 import commonjs from '@rollup/plugin-commonjs';
 import svg from 'rollup-plugin-svg';
+import alias from 'rollup-plugin-alias';
 
 export default {
     input: './src/main.js',
+    context: 'null',
+    moduleContext: 'null',
     output: [
         {
             inlineDynamicImports : true,
@@ -18,6 +21,11 @@ export default {
         }
     ],
     plugins: [
+        alias({
+            entries: [
+                { find: 'geotiff', replacement: 'node_modules/geotiff/dist-browser/geotiff.js' }
+            ]
+        }),
         resolve({
             browser: true,
             extensions: ['.js', '.json', '.vue'],

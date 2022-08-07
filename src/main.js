@@ -21,10 +21,10 @@ Vue.config.productionTip = false;
 Vue.prototype.store = localStore
 Vue.prototype.$bus = new Vue();
 
-let i18n = new VueI18n({
-  locale: "ru",
-  messages: {}
-});
+// let i18n = new VueI18n({
+//   locale: "ru",
+//   messages: {}
+// });
 
 setDevextremeLocale("ru");
 moment.locale("ru");
@@ -61,7 +61,12 @@ export class Permit {
   constructor(element, options) {
     // Vue.prototype.store.dispatch('dispStore/setGmiloUrl', options.gmilourl);
     new Vue({
-      render: h => h(App),
+      render: h => h(App,{
+        props: {
+          eventBus: new Vue(),
+          store: localStore
+        }
+      }),
     }).$mount(element);
   }
 }
