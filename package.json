@@ -1,7 +1,8 @@
 {
-  "name": "@nlc/permit",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@ace5040/demo3",
+  "version": "1.0.12",
+  "description": "",
+  "main": "dist/main.js",
   "scripts": {
     "serve": "vue-cli-service serve --port 9097",
     "build": "vue-cli-service build",

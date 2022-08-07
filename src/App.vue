@@ -1,5 +1,5 @@
 <template>
-  <div id="app-epcs-permit" class="epcs-permit">
+  <div id="app" class="epcs-permit">
     <FormTemplate :data="formData" :application="application"></FormTemplate>
   </div>
 </template>
